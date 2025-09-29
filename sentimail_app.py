@@ -8,12 +8,12 @@ st.title("SentiMail Sentiment Prediction App")
 
 # Load the trained logistic regression model and vectorizer
 try:
-    with open('sentimail_logreg_model.pkl', 'rb') as file:
+    with open('senti_logreg_model.pkl', 'rb') as file:
         data = pickle.load(file)
         logreg = data['model']
         tfidf = data['vectorizer']
 except FileNotFoundError:
-    st.error("Model file 'sentimail_logreg_model.pkl' not found. Please ensure it is in the same directory.")
+    st.error("Model file 'senti_logreg_model.pkl' not found. Please ensure it is in the same directory.")
     st.stop()
 
 # Centered input and button (always visible after model loads)
@@ -48,4 +48,5 @@ st.write("""
 1. Enter the email topic or content above.
 2. Click the 'Sentiment Analysis' button to see the predicted sentiment category.
 """)
+
 
