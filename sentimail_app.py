@@ -23,7 +23,7 @@ st.write("""
 </div>
 """, unsafe_allow_html=True)
 
-email_topic = st.text_area("Email Topic", "Type or paste the email subject or content here...", key="email_topic", help=None)
+email_topic = st.text_area("Email Topic", key="email_topic", help=None)
 
 predict_btn = st.button("Sentiment Analysis")
 
@@ -48,3 +48,4 @@ st.write("""
 1. Enter the email topic or content above.
 2. Click the 'Sentiment Analysis' button to see the predicted sentiment category.
 """)
+
